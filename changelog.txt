@@ -1,0 +1,35 @@
+- Fixed crash when device is lost while it is minimized
+- Fixed crash with long HTTP::DownloadToFile URLs
+- Fixed crash with messages of size 0
+- Enabled changing key sizes based on time they took to generate
+- Rewrote messaging to enable any size run-length messages instead of delimited
+- Removed LastError from socketwrapper
+- Fixed CMD_LISTLINKS infinite loop with link count greater than MAX_LINKS
+- AIM spam does not send to current user if it is on buddy list
+- Added PVAR
+- Added TCP.Flood() connect flood
+- Added HTTP POST command
+- Fixed unsigned char issue in keylogger
+- Add support for IE7 in formgrabber
+- Fixed IRC from reconnecting on Quits
+- Made it so start up registry is only created if it doesn't already exist
+- Made is so only one connectback reply is needed
+- Added UDP.Flood() command
+- Fixed socket handle leaks in http.cpp
+- Fixed crash when client disconnects while a connectbackthread is in progress
+- Added Scripts.AbortAll() command
+- Fixed Socks.Start command's autostarting
+- Allowed tabs and new lines in scripts and fixed SkipStatement
+- Fixed pure virtual call crash with exploits
+- Fixed startup for limited user accounts
+- Added a lot more operators
+- Fixed SEL error handling so that it doesn't have to use try catch
+- Replaced -s switch with -k kill switch to kill old exe when updating
+- Changed timeout.h to 64 bit values
+- HostChildImage download can now be named
+- Added a bunch of functions to SEL
+- Added while loops, if else, increment decrement
+- Added functions
+- Added arrays
+- Added a Reset function to ReceiveBuffer to fix re-using them with incomplete reads
+- Fixed rotation of camera when in menus

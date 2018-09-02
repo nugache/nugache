@@ -1,0 +1,607 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SNU3                ICON                    "snu3.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PREFERENCES DIALOGEX 0, 0, 292, 205
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTERMOUSE | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+FONT 8, "MS Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Close",IDC_CLOSE,28,182,49,16
+    CONTROL         "",IDC_REGION,"Static",SS_BLACKRECT,99,7,186,191
+    CONTROL         "",IDC_TREE,"SysTreeView32",TVS_HASLINES | 
+                    TVS_LINESATROOT | TVS_SHOWSELALWAYS | TVS_TRACKSELECT | 
+                    TVS_NOSCROLL | WS_BORDER | WS_TABSTOP,7,7,85,168
+END
+
+IDD_PREFS_LINKS DIALOGEX 0, 0, 186, 191
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Add",IDC_ADD,132,10,49,16
+    PUSHBUTTON      "Remove",IDC_REMOVE,131,51,49,16,WS_DISABLED
+    PUSHBUTTON      "Import List",IDC_IMPORT,131,72,49,16
+    PUSHBUTTON      "Export List",IDC_EXPORT,131,93,49,16,WS_DISABLED
+    PUSHBUTTON      "Clear All",IDC_CLEAR,131,114,49,16,WS_DISABLED
+    EDITTEXT        IDC_MAXLINKS,150,150,32,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Automatically add links to list",IDC_AUTOADDLINKS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,152,106,12
+    GROUPBOX        "Links",IDC_STATIC,0,0,186,142
+    GROUPBOX        "Options",IDC_STATIC,0,143,186,37
+    PUSHBUTTON      "Edit",IDC_EDIT,131,31,49,16,WS_DISABLED
+    LISTBOX         IDC_LIST,5,10,121,120,LBS_SORT | LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Total number of links :",IDC_STATIC,7,131,72,8
+    CONTROL         "Automatically remove unreachable links",
+                    IDC_AUTOREMOVELINKS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,165,139,10
+    EDITTEXT        IDC_MINLINKS,150,164,32,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "",IDC_COUNT,81,131,24,8
+END
+
+IDD_PREFS_ABOUT DIALOGEX 0, 0, 186, 191
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDI_SNU3,IDC_STATIC,6,0,20,20
+    LTEXT           "SNU",IDC_STATIC,33,7,14,8
+    LTEXT           "© 2754\r\n\r\nWritten by: Linus Turdvalds\r\nCopyright © 1991-2754",
+                    IDC_STATIC,8,19,106,34
+    LTEXT           "The authors of this program accept no responsibility for damages that might occur as the result of it’s use and make NO WARRANTY.  This software is distributed on an “AS IS” basis and, YOU, the end user, assume full responsibility for the risk of using it.",
+                    IDC_STATIC,6,101,170,43,SS_NOPREFIX
+    LTEXT           "WARNING: this program is protected by copyright law and international treaties. Unauthorized reproduction or distribution of any portion of it may result in severe criminal penalties and will be prosecuted to the maximum extent possible under the law.",
+                    IDC_STATIC,6,148,174,41
+    CTEXT           "Unregistered",IDC_STATIC,0,55,185,44,SS_CENTERIMAGE
+    LTEXT           "",IDM_CLEARHISTORY,127,19,29,23
+END
+
+IDD_LOGHARVESTER DIALOGEX 0, 0, 486, 270
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+CAPTION "Log Harvester"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Listen",IDC_GROUP,7,3,472,26
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,32,472,222
+    DEFPUSHBUTTON   "",IDC_LISTEN,63,11,50,14
+    EDITTEXT        IDC_PORT,29,12,29,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Port",IDC_STATIC,12,15,14,8
+    PUSHBUTTON      "Close",IDC_CLOSE,424,11,50,14
+    PUSHBUTTON      "&Settings...",IDC_SETTINGS,371,11,50,14
+    LTEXT           "Total Items: 0/0",IDC_TOTALITEMS,7,257,82,8
+END
+
+IDD_SENDLOG DIALOGEX 0, 0, 176, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Send Log"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,119,40,50,14
+    PUSHBUTTON      "Close",IDCANCEL,119,58,50,14
+    CONTROL         "Key Log",IDC_KEYLOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,46,37,10
+    GROUPBOX        "Transfer",IDC_STATIC,7,36,107,36
+    GROUPBOX        "Host",IDC_STATIC,7,7,162,27
+    EDITTEXT        IDC_HOST,11,17,107,12,ES_AUTOHSCROLL
+    CONTROL         "Form Log",IDC_FORMLOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,58,45,10
+    EDITTEXT        IDC_PORT,126,17,38,12,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_PREFS_SETTINGS DIALOGEX 0, 0, 186, 191
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Connection Key",-1,0,0,185,48
+    PUSHBUTTON      "Generate",IDC_GENERATE,132,8,49,16
+    CTEXT           "Status",IDC_STATUS,26,11,82,13,SS_CENTERIMAGE | 
+                    WS_BORDER
+    PUSHBUTTON      "Import",IDC_IMPORT,132,28,49,16
+    PUSHBUTTON      "Export Public",IDC_EXPORTPUBLIC,4,28,58,16
+    PUSHBUTTON      "Export Private",IDC_EXPORTPRIVATE,67,28,60,16
+    GROUPBOX        "Master Messaging Key",-1,0,50,185,28
+    CTEXT           "Status",IDC_STATUS2,26,61,82,13,SS_CENTERIMAGE | 
+                    WS_BORDER
+    PUSHBUTTON      "Import",IDC_IMPORT2,132,58,49,16
+END
+
+IDD_GENERATEKEY DIALOGEX 0, 0, 249, 74
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION
+CAPTION "Generate Key"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Start",IDC_START,187,17,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,186,47,50,14
+    GROUPBOX        "Generate Key",IDC_STATIC,129,7,114,31
+    GROUPBOX        "Progress",IDC_STATIC,8,38,235,27
+    LTEXT           "Bits",IDC_STATIC,171,21,12,8
+    EDITTEXT        IDC_BITS,134,19,32,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER,11,48,168,
+                    13
+    GROUPBOX        "Status",IDC_STATIC,7,7,117,31
+    LTEXT           "",IDC_STATUS,11,15,107,20
+END
+
+IDD_SETPASSWORD DIALOGEX 0, 0, 279, 44
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Set Password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,197,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,197,23,50,14
+    EDITTEXT        IDC_PASSWORD1,85,7,104,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD2,85,23,104,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Password",IDC_STATIC,50,11,32,8
+    LTEXT           "Verify Password",IDC_STATIC,30,25,54,8
+END
+
+IDD_ENTERPASSWORD DIALOGEX 0, 0, 217, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Enter Password"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,160,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,160,24,50,14
+    EDITTEXT        IDC_PASSWORD,46,7,104,14,ES_PASSWORD | ES_AUTOHSCROLL | 
+                    ES_WANTRETURN
+    LTEXT           "Password",IDC_STATIC,10,10,32,8
+    CONTROL         "Remember my password (insecure)",IDC_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,11,25,133,10
+END
+
+IDD_MESSAGEQUEUE DIALOGEX 0, 0, 450, 382
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Message Queue"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,7,7,436,215
+    CONTROL         "Clients",IDC_EXECLIENTS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,233,37,9
+    CONTROL         "Links",IDC_EXELINKS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,49,231,31,14
+    EDITTEXT        IDC_UUID,103,231,130,13,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "UUID",IDC_STATICUUID,83,234,18,8,NOT WS_GROUP
+    GROUPBOX        "Execution",IDC_STATICEXE,7,223,231,25
+    EDITTEXT        IDC_TTL,353,232,23,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "TTL",IDC_STATICTTL,339,234,12,8,NOT WS_GROUP
+    GROUPBOX        "Broadcast",IDC_STATICMSG,250,223,131,25
+    COMBOBOX        IDC_COMBO,254,232,80,30,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "",IDC_STATICADD,385,223,58,25
+    EDITTEXT        IDC_SCRIPT,7,275,436,100,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "Add New",IDC_ADDNEW,389,230,50,14
+    GROUPBOX        "Message ID",IDC_STATICMSGID,334,248,109,25
+    EDITTEXT        IDC_MID,338,257,47,13,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "Regenerate",IDC_NEWMID,389,256,50,14
+    GROUPBOX        "Script Name",IDC_STATICSCRIPTNAME,7,248,162,25
+    EDITTEXT        IDC_SCRIPTNAME,11,257,153,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC_BARTOP,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE,7,220,436,5
+    CONTROL         "",IDC_STATIC_BARBOTTOM,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE,7,271,436,5
+END
+
+IDD_PREFS_MESSAGEQUEUE DIALOGEX 0, 0, 186, 191
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Automatically sign message when it is added",
+                    IDC_AUTOSIGN,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,6,11,157,10
+    CONTROL         "Automatically send message after it is signed",
+                    IDC_AUTOSEND,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,6,23,159,10
+    CONTROL         "Send messages on connection establishment",
+                    IDC_AUTOSENDONCONNECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,6,34,158,10
+    GROUPBOX        "Options",IDC_STATIC,1,0,184,48
+END
+
+IDD_PREFS_LOGHARVESTER DIALOGEX 0, 0, 186, 191
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Files",IDC_STATIC,1,1,184,37
+    EDITTEXT        IDC_DIRECTORY,6,19,133,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BROWSE,144,19,35,14
+    LTEXT           "Save logs to directory:",IDC_STATIC,7,10,74,8
+END
+
+IDD_HTTPDOWNLOAD DIALOGEX 0, 0, 236, 68
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "HTTP Download"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,179,11,50,14
+    PUSHBUTTON      "Close",IDCANCEL,179,29,50,14
+    EDITTEXT        IDC_URL,44,18,126,12,ES_AUTOHSCROLL
+    CONTROL         "Update",IDC_UPDATE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,87,47,39,10
+    GROUPBOX        "Options",IDC_STATIC,7,7,168,54
+    CONTROL         "Execute",IDC_EXECUTE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,44,47,42,10
+    EDITTEXT        IDC_FILE,44,32,126,12,ES_AUTOHSCROLL
+    LTEXT           "URL:",IDC_STATIC,27,20,16,8
+    LTEXT           "Local File:",IDC_STATIC,11,34,32,8
+END
+
+IDD_STARTIRCBOT DIALOGEX 0, 0, 172, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Start IRC Bot"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,33,97,50,14
+    PUSHBUTTON      "Close",IDCANCEL,104,97,50,14
+    GROUPBOX        "User Information",IDC_STATIC,7,35,85,59
+    GROUPBOX        "IRC Server",IDC_STATIC,7,7,158,27
+    EDITTEXT        IDC_HOST,11,17,107,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PORT,122,17,38,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CHANNEL,102,45,58,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IDENT,33,61,53,12,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_NAME,33,77,53,12,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "Nick",IDC_STATIC,12,47,14,8
+    LTEXT           "Ident",IDC_STATIC,12,63,18,8
+    LTEXT           "Name",IDC_STATIC,12,78,19,8
+    GROUPBOX        "Join Channel",IDC_STATIC,97,35,68,27
+    EDITTEXT        IDC_NICK,33,45,53,12,ES_AUTOHSCROLL | WS_GROUP
+    GROUPBOX        "Allowed Host",IDC_STATIC,97,67,68,27
+    EDITTEXT        IDC_ALLOWED,102,77,58,12,ES_AUTOHSCROLL
+END
+
+IDD_SPREAD_AIM DIALOGEX 0, 0, 124, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Spread AIM"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,67,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,67,24,50,14
+    EDITTEXT        IDC_TIMESTOSEND,26,7,16,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Send",IDC_STATIC,7,10,17,8
+    LTEXT           "times",IDC_STATIC,45,10,18,8
+END
+
+IDD_ENTERADDRESS DIALOGEX 0, 0, 233, 29
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | 
+    WS_CAPTION
+CAPTION "Connect to Address"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,121,7,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,176,7,50,15
+    EDITTEXT        IDC_ADDRESS,7,7,109,15,ES_AUTOHSCROLL
+END
+
+IDD_ADDEDITLINK DIALOGEX 0, 0, 200, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,143,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,143,25,50,14
+    EDITTEXT        IDC_ADDRESS,40,7,99,14,ES_AUTOHSCROLL
+    CONTROL         "Permanent",IDC_PERMANENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,39,24,51,10
+    LTEXT           "Address:",IDC_STATIC,7,9,30,8
+END
+
+IDD_PREFS_DISPLAY DIALOGEX 0, 0, 186, 191
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Connecting",IDC_STATIC,23,11,37,8
+    LTEXT           "Neutral",IDC_STATIC,23,44,24,8
+    LTEXT           "Ready",IDC_STATIC,23,22,22,8
+    LTEXT           "Updated",IDC_STATIC,23,33,28,8
+    CONTROL         "",IDC_COLORBTN1,"Button",BS_OWNERDRAW | WS_TABSTOP,5,11,
+                    15,8,WS_EX_TRANSPARENT
+    GROUPBOX        "Link status",IDC_STATIC,0,0,72,68
+    LTEXT           "Unreachable",IDC_STATIC,23,55,41,8
+    GROUPBOX        "Main interface",IDC_STATIC,76,0,110,57
+    LTEXT           "Interconnects",IDC_STATIC,99,11,46,8
+    LTEXT           "Orbitals",IDC_STATIC,99,33,26,8
+    LTEXT           "Background",IDC_STATIC,99,44,38,8
+    CONTROL         "",IDC_COLORBTN2,"Button",BS_OWNERDRAW | WS_TABSTOP,5,22,
+                    15,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_COLORBTN3,"Button",BS_OWNERDRAW | WS_TABSTOP,5,33,
+                    15,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_COLORBTN4,"Button",BS_OWNERDRAW | WS_TABSTOP,5,44,
+                    15,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_COLORBTN5,"Button",BS_OWNERDRAW | WS_TABSTOP,5,55,
+                    15,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_COLORBTN6,"Button",BS_OWNERDRAW | WS_TABSTOP,81,
+                    11,15,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_COLORBTN8,"Button",BS_OWNERDRAW | WS_TABSTOP,81,
+                    33,15,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_COLORBTN9,"Button",BS_OWNERDRAW | WS_TABSTOP,81,
+                    44,15,8,WS_EX_TRANSPARENT
+    LTEXT           "Selected",IDC_STATIC,99,22,28,8
+    CONTROL         "",IDC_COLORBTN7,"Button",BS_OWNERDRAW | WS_TABSTOP,81,
+                    22,15,8,WS_EX_TRANSPARENT
+    CONTROL         "Minimize to system tray",IDC_MINIMIZETOTRAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,79,91,10
+    GROUPBOX        "Options",IDC_STATIC,0,69,185,24
+END
+
+IDD_CUSTOM_COMMAND DIALOGEX 0, 0, 406, 47
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Custom Command"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,349,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,349,24,50,14
+    EDITTEXT        IDC_CUSTOMCOMMAND,7,7,338,31,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+END
+
+IDD_SENDUPDATE DIALOGEX 0, 0, 186, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Send Update"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Send",IDC_SEND,129,7,50,14,WS_DISABLED
+    PUSHBUTTON      "Close",IDC_CLOSE,129,42,50,14
+    LTEXT           "Status:",IDC_STATIC,8,45,24,8
+    LTEXT           "Size:",IDC_STATIC,16,25,16,8
+    DEFPUSHBUTTON   "Browse...",IDC_BROWSE,7,7,118,14
+    PUSHBUTTON      "Sign",IDC_SIGN,129,24,50,14,WS_DISABLED
+    LTEXT           "Date:",IDC_STATIC,13,35,19,8
+    LTEXT           "0 Bytes",IDC_STATIC_SIZE,35,25,89,8
+    LTEXT           "...",IDC_STATIC_DATE,35,35,89,8
+    LTEXT           "No File",IDC_STATIC_STATUS,35,45,88,8
+END
+
+IDD_LISTLINKS DIALOGEX 0, 0, 121, 121
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Links"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,0,107,50,14
+    LISTBOX         IDC_LIST,0,0,119,106,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PREFERENCES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_LOGHARVESTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 479
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_SENDLOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 169
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_GENERATEKEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 65
+    END
+
+    IDD_SETPASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_ENTERPASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_MESSAGEQUEUE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 443
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 375
+    END
+
+    IDD_HTTPDOWNLOAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_STARTIRCBOT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 165
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_SPREAD_AIM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 117
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_ENTERADDRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_ADDEDITLINK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_CUSTOM_COMMAND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 399
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_SENDUPDATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        POPUP "Connect"
+        BEGIN
+            MENUITEM "Enter Address...",            IDM_CONNECT_ADDRESS
+            MENUITEM "Random Link",                 40029
+        END
+        MENUITEM "Disconnect",                  IDM_FILE_DISCONNECT
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        IDM_FILE_EXIT
+    END
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Message Queue",               IDM_TOOLS_MESSAGEQUEUE
+        MENUITEM "Log Harvester",               IDM_TOOLS_LOGHARVESTER
+        MENUITEM "Send Update",                 IDM_TOOLS_SENDUPDATE
+        MENUITEM SEPARATOR
+        MENUITEM "Preferences",                 IDM_TOOLS_PREFERENCES
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About",                       IDM_HELP_ABOUT
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

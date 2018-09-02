@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "snus3", "snus3.vcxproj", "{502A6C53-F0B9-4DBC-A264-CB9B96C26290}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "snu3", "snu3.vcxproj", "{0162CF2A-890D-4A8C-BDB7-F84D16BD4098}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lgdll", "lgdll.vcxproj", "{3A242E9E-3228-4312-9F4C-4583A134913F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{502A6C53-F0B9-4DBC-A264-CB9B96C26290}.Debug|x86.ActiveCfg = Release|Win32
+		{502A6C53-F0B9-4DBC-A264-CB9B96C26290}.Debug|x86.Build.0 = Release|Win32
+		{502A6C53-F0B9-4DBC-A264-CB9B96C26290}.Release|x86.ActiveCfg = Release|Win32
+		{502A6C53-F0B9-4DBC-A264-CB9B96C26290}.Release|x86.Build.0 = Release|Win32
+		{0162CF2A-890D-4A8C-BDB7-F84D16BD4098}.Debug|x86.ActiveCfg = Release|Win32
+		{0162CF2A-890D-4A8C-BDB7-F84D16BD4098}.Release|x86.ActiveCfg = Debug|Win32
+		{3A242E9E-3228-4312-9F4C-4583A134913F}.Debug|x86.ActiveCfg = Release|Win32
+		{3A242E9E-3228-4312-9F4C-4583A134913F}.Release|x86.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DF083A6-B3A8-4474-9169-59155944A8B5}
+	EndGlobalSection
+EndGlobal

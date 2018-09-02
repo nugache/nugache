@@ -1,0 +1,1 @@
+VOID DrawEverything(HDC hDC);
